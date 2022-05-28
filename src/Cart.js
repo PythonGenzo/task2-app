@@ -5,11 +5,15 @@ export default function Cart({ cart }) {
         <div>
           {cart.map((item) => (
             <div>
-                {item.size} 
-                {item.name} 
-                {item.rating}
-                {item.price} 
+                <div>
+                    {item.size} 
+                    {item.name} 
+                    {item.rating}
+                    {item.price} 
+                </div>
+             <button>Remove</button>
             </div>
+        
           ))}
         </div>
       </>

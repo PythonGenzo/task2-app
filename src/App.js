@@ -58,7 +58,20 @@ function App() {
     selectedProduct.isDisabled = true;
 
     setCart(cartCopy);
+
+   
   }
+
+//   const removeCart = (product) => {
+//     let cartCopy = [...cart];
+//     cartCopy.remove(product);
+//     setCart(cartCopy);
+
+//     let selectedProduct = cartCopy.filter((item) => item.id === product.id);
+//     selectedProduct.isDisabled = true;
+
+//     setCart(cartCopy);
+//  } 
 
   return (
     <div className="App">
@@ -66,7 +79,11 @@ function App() {
         Home 
         Products
         About
-      <Cart cart={cart} />
+      <button className="cart" 
+      // onClick={() => removeCart(product)}
+      >
+      <Cart  cart={cart} />
+      </button>
       </nav>
       <div className="main-page">
        <h1>Shop in style</h1>

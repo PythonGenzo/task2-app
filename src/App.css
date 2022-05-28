@@ -4,12 +4,22 @@
   align-items: center;
 
 }
+.cart {
+  color: black;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  margin-left: auto;
+
+}
 
 nav {
   display: flex;
   /* justify-content: center; */
   padding: 10px;
-  margin-left: auto;
+  font-weight: bold;
+  gap: 10px;
+
 }
 
 .main-page {
