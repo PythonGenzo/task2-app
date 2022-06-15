@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react";
 import Cart from "./Cart";
+import { Link, Route, Routes } from 'react-router-dom';
 
 
 const products = [
@@ -44,22 +45,43 @@ const products = [
   }
 ]
 
+
+
+
 function App() {
 
-  const [initialProducts, setinitialProducts] = useState(products);
+  <div>
+<ul>
+  <li>
+    Home
+  </li>
+  <li>
+  <Link to="/cart">Cart</Link>
+    </li>
+</ul>
+
+  <div>
+  <Routes>
+    <Route path="/cart" element={<Cart/>}/>
+  
+  
+  </Routes>
+</div>
+</div>
+
+  const [initialProducts, setinitialProducts] = 
+  useState(products);
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
     let cartCopy = [...cart];
     cartCopy.push(product);
     setCart(cartCopy);
-
     let selectedProduct = cartCopy.filter((item) => item.id === product.id);
     selectedProduct.isDisabled = true;
 
     setCart(cartCopy);
 
-   
   }
 
 //   const removeCart = (product) => {
